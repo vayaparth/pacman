@@ -1,7 +1,7 @@
 
 # Pacman AI Project
 
-Welcome to the Pacman AI project, an academic exploration into artificial intelligence through a practical application. This project is designed as part of a university coursework "Artificial Intelligence" to delve into the complexities of AI by implementing intelligent agents within the classic Pacman game framework. The focus is on developing algorithms that enable the player to exhibit advanced behaviors such as strategic chasing, evading, and interacting under various game conditions. This implementation serves not only as an educational tool but also as a challenging platform to test and enhance our understanding of AI methodologies in dynamic environments.
+Welcome to the Pacman AI project, an academic exploration into artificial intelligence through a practical application. This project is designed as part of a university coursework "Artificial Intelligence" lectured by Prof. Dr. Jakob Suchan to delve into the complexities of AI by implementing intelligent agents within the classic Pacman game framework. The focus is on developing algorithms that enable the player to exhibit advanced behaviors such as strategic chasing, evading, and interacting under various game conditions. This implementation serves not only as an educational tool but also as a challenging platform to test and enhance our understanding of AI methodologies in dynamic environments.
 
 ## Project Structure
 
