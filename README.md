@@ -14,7 +14,7 @@ Pacman_AI/
 └── pacman.py           # Main game logic including AI behaviors for ghosts
 ```
 
-## Project Phases
+## Implemented Project Phases
 
 ### Phase 0 - Situated Agents (Week 2)
 For this phase, ensure your project environment is set up to build your own rational agents. The environment should include structures such as walls or obstacles and allow the agent to move around and accomplish specific tasks.
