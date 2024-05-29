@@ -1,18 +1,20 @@
-# Build Pac-Man from Scratch in Python with PyGame!!
+# Import necessary libraries for the game
 import copy
-from board import boards
+from board import boards # Import pre-defined board configurations
 import pygame
 import math
-
+# Initialize Pygame
 pygame.init()
-
+# Define the dimensions of the game window
 WIDTH = 900
 HEIGHT = 950
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 timer = pygame.time.Clock()
 fps = 60
 font = pygame.font.Font('freesansbold.ttf', 20)
+# Deep copy the board to reset the game without altering the original configuration
 level = copy.deepcopy(boards)
+# Game environment setup: Define the game space and barriers
 color = 'blue'
 PI = math.pi
 player_images = []
@@ -24,6 +26,7 @@ inky_img = pygame.transform.scale(pygame.image.load(f'assets/ghost_images/blue.p
 clyde_img = pygame.transform.scale(pygame.image.load(f'assets/ghost_images/orange.png'), (45, 45))
 spooked_img = pygame.transform.scale(pygame.image.load(f'assets/ghost_images/powerup.png'), (45, 45))
 dead_img = pygame.transform.scale(pygame.image.load(f'assets/ghost_images/dead.png'), (45, 45))
+# Define initial positions and states
 player_x = 450
 player_y = 663
 direction = 0
@@ -41,13 +44,15 @@ clyde_y = 438
 clyde_direction = 2
 counter = 0
 flicker = False
-# R, L, U, D
+
+# Allowed movements based on collision checks
 turns_allowed = [False, False, False, False]
 direction_command = 0
 player_speed = 2
 score = 0
 powerup = False
 power_counter = 0
+# Keep track of ghost states
 eaten_ghost = [False, False, False, False]
 targets = [(player_x, player_y), (player_x, player_y), (player_x, player_y), (player_x, player_y)]
 blinky_dead = False
@@ -879,9 +884,10 @@ def get_targets(blink_x, blink_y, ink_x, ink_y, pink_x, pink_y, clyd_x, clyd_y):
             clyd_target = return_target
     return [blink_target, ink_target, pink_target, clyd_target]
 
-
+# Main game loop handling game state updates and user input
 run = True
 while run:
+	# Update counters and state flags
     timer.tick(fps)
     if counter < 19:
         counter += 1
@@ -947,6 +953,7 @@ while run:
 
     turns_allowed = check_position(center_x, center_y)
     if moving:
+    	# Movement logic for player and ghosts
         player_x, player_y = move_player(player_x, player_y)
         if not blinky_dead and not blinky.in_box:
             blinky_x, blinky_y, blinky_direction = blinky.move_blinky()
@@ -1216,7 +1223,8 @@ while run:
     if clyde.in_box and clyde_dead:
         clyde_dead = False
 
-    pygame.display.flip()
+    pygame.display.flip() 
+# Clean up and exit
 pygame.quit()
 
 
