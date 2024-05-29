@@ -73,6 +73,6 @@ This project is open-source and available under the MIT License.
 
 ## Authors
 - **Mohamed Mourad Ouazghire 30005138**
-- **Nadim Khneisser**
+- **Nadim Khneisser 30006165**
 - **Vaya Parth Jitendra**
 - **Dayanna Picon**
